@@ -27,9 +27,9 @@
             <h1 class="text-6xl text-gradient-main inline-block">
               Hanna Julia
             </h1>
-            <h2 class="text-3xl">Web Developer</h2>
+            <h2 class="text-3xl mt-2 source-sans-light">Web Developer</h2>
           </div>
-          <div>
+          <div class="md:mt-12">
             Ob in meiner Masterarbeit, meiner Arbeit oder bei Hobby Projekten -
             für mich geht es bei Technik um den Menschen. Ich entwickle
             leidenschaftlich Lösungen bei denen der User an erster Stelle steht.
