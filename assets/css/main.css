@@ -1,0 +1,44 @@
+@import url('./components/_navigation.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    @apply max-w-full md:w-4xl lg:w-5xl mx-auto flex md:justify-center md:items-center px-4 md:px-2 lg:px-0;
+}
+
+.main-gradient {
+    background: rgb(255,140,0);
+background: linear-gradient(90deg, rgba(255,140,0,1) 0%, rgba(234,51,143,1) 52%, rgba(14,101,188,1) 100%);
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, rgba(255,140,0,1) 0%, rgba(234,51,143,1) 52%, rgba(14,101,188,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+.bg-gradient-main {
+    @apply bg-gradient-to-r from-orange via-pink to-blue;
+}
+
+.text-gradient-main {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-orange via-pink to-blue;
+}
+
+.border-gradient-main {
+    @apply before:border-transparent before:bg-gradient-to-r before:from-orange before:via-pink before:to-blue after:border-transparent after:bg-gradient-to-r after:from-orange after:via-pink after:to-blue;
+}
+
+.border-gradient-main {
+    @apply relative p-1;
+}
+
+.border-gradient-main::before {
+    content: "";
+    @apply absolute inset-0 rounded-lg p-[2px] bg-gradient-to-r from-orange via-pink to-blue;
+    mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
