@@ -29,6 +29,12 @@ export default {
         blue: "#0E65BC",
         gradient:
           "linear-gradient(0deg, theme(color.orange) 0%, theme(color.pink) 52%, theme(color.blue) 100%)",
+        black: "#0c0c0c",
+        white: "#fefefe",
+        gray: "#363636",
+      },
+      borderWidth: {
+        6: "6px",
       },
     },
   },

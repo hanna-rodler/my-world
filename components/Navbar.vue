@@ -1,8 +1,8 @@
 <template>
   <header
-    class="relative z-20 w-full border-b border-slate-200 bg-white/90 shadow-lg shadow-slate-700/5 after:absolute after:left-0 after:top-full after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden md:flex md:justify-center text-black"
+    class="relative z-20 w-full border-b border-slate-200 bg-white/90 shadow-lg shadow-slate-700/5 after:absolute after:left-0 after:top-full after:z-10 after:block after:h-px after:w-full after:bg-slate-200 md:border-slate-200 md:backdrop-blur-sm md:after:hidden md:flex md:justify-center text-black"
   >
-    <div class="relative max-w-full md:w-5xl mx-auto px-4 md:px-0">
+    <div class="relative max-w-full md:w-5xl mx-auto px-4 lg:px-0">
       <nav
         aria-label="main navigation"
         class="flex h-20 items-stretch justify-between font-medium text-slate-700"
@@ -12,7 +12,7 @@
           id="WindUI"
           aria-label="WindUI logo"
           aria-current="page"
-          class="flex items-center gap-2 whitespace-nowrap py-3 text-lg focus:outline-none lg:flex-1"
+          class="flex items-center gap-2 whitespace-nowrap py-3 text-lg focus:outline-none md:flex-1"
           href="javascript:void(0)"
         >
           <svg
@@ -39,7 +39,7 @@
           HJR
         </a>
         <button
-          class="relative order-10 block h-10 w-10 self-center lg:hidden"
+          class="relative order-10 block h-10 w-10 self-center md:hidden"
           :class="{
             'visible opacity-100 [&_span:nth-child(1)]:w-6 [&_span:nth-child(1)]:translate-y-0 [&_span:nth-child(1)]:rotate-45 [&_span:nth-child(2)]:-rotate-45 [&_span:nth-child(3)]:w-0':
               isToggleOpen,
@@ -68,38 +68,41 @@
         <ul
           role="menubar"
           aria-label="Select page"
-          class="absolute left-0 top-0 z-[-1] h-[28.5rem] w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-white/90 px-8 pb-12 pt-24 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0 lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0 lg:pt-0 lg:opacity-100"
+          class="absolute left-0 top-0 z-[-1] h-[28.5rem] w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-white/90 px-8 pb-12 pt-24 font-medium transition-[opacity,visibility] duration-300 md:visible md:relative md:top-0 md:z-0 md:flex md:h-full md:w-auto md:items-stretch md:overflow-visible md:bg-white/0 md:px-0 md:py-0 md:pt-0 md:opacity-100"
           :class="{
             'visible opacity-100 backdrop-blur-sm': isToggleOpen,
             'invisible opacity-0': !isToggleOpen,
           }"
         >
-          <li role="none" class="flex items-stretch">
+          <li role="none" class="navitem">
             <a
               role="menuitem"
               aria-haspopup="false"
-              class="flex items-center gap-2 py-4 md:py-2 transition-colors duration-300 navitem focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
+              class="focus:text-blue focus:outline-none focus-visible:outline-none"
               href="javascript:void(0)"
             >
-              <span>Über mich</span>
+              <span class="">Über mich</span>
+              <!-- <div
+                class="absolute bottom-0 left-0 w-20 h-2 bg-gradient-to-r from-orange via-pink to-blue rounded-tl-xl rounded-br-xl"
+              ></div> -->
             </a>
           </li>
-          <li role="none" class="flex items-stretch">
+          <li role="none" class="navitem">
             <a
               role="menuitem"
               aria-current="page"
               aria-haspopup="false"
-              class="flex items-center gap-2 py-4 md:py-2transition-colors duration-300 navitem focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
-              href="javascript:void(0)"
+              class="focus:text-blue focus:outline-none focus-visible:outline-none"
+              href="#knowledge"
             >
               <span>Lebensweg & Wissen</span>
             </a>
           </li>
-          <li role="none" class="flex items-stretch">
+          <li role="none" class="navitem">
             <a
               role="menuitem"
               aria-haspopup="false"
-              class="flex items-center gap-2 py-4 md:py-2 transition-colors duration-300 navitem focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
+              class="focus:text-blue focus:outline-none focus-visible:outline-none"
               href="javascript:void(0)"
             >
               <span>Kontakt</span>
