@@ -3,16 +3,17 @@
     role="article"
     class="relative pl-6 before:absolute before:left-0 before:top-2 before:z-10 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-blue before:ring-2 before:ring-white lg:flex lg:gap-12 lg:pl-0 lg:before:-left-[2.5rem] lg:left-[4rem]"
   >
-    <!-- relative pl-6 before:absolute before:left-0 before:top-2 before:z-10 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-emerald-500 before:ring-2 before:ring-white -->
     <div class="flex flex-col flex-1 gap-3">
       <div class="flex flex-col">
-        <h3 class="flex flex-col md:flex-row text-lg font-medium leading-7">
+        <h4
+          class="flex flex-col md:flex-row text-base md:text-lg font-medium leading-7"
+        >
           <span :class="{ 'font-bold': item.highlight }">{{ item.title }}</span>
           <span class="font-light" v-if="item.company">
             <span class="hidden md:inline-block md:mx-2"> - </span>
             {{ item.company }}</span
           >
-        </h3>
+        </h4>
         <span class="font-normal text-gray leading-normal">
           {{ item.date }}</span
         >

@@ -4,7 +4,7 @@
 
 
 .navitem:hover {
-    @apply transition-all text-black after:content-[''] after:absolute after:bottom-6  after:h-1.5 after:bg-gradient-to-r after:from-orange after:via-pink after:to-blue after:rounded-tl-xl after:rounded-br-xl;
+    @apply transition-all duration-200 text-black after:content-[''] after:absolute after:bottom-6  after:h-1.5 after:bg-gradient-to-r after:from-orange after:via-pink after:to-blue after:rounded-tl-xl after:rounded-br-xl;
 }
 
 .navitem::after {

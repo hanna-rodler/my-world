@@ -18,8 +18,9 @@
   },
   "devDependencies": {
     "@iconify-json/heroicons": "^1.2.2",
+    "@nuxtjs/tailwindcss": "^6.13.2",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
-    "tailwindcss": "^3.4.17"
+    "prettier-plugin-tailwindcss": "^0.6.11"
   }
 }

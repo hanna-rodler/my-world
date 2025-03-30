@@ -5,4 +5,5 @@
     <NuxtWelcome /> -->
     <NuxtPage />
   </main>
+  <Footer></Footer>
 </template>

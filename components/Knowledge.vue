@@ -1,17 +1,16 @@
 <template>
   <div class="container my-5 flex-col" id="knowledge">
-    <h2 class="text-3xl mb-10 font-semibold">Lebensweg & Wissen</h2>
+    <AtomsHeadline level="h2">Lebensweg & Wissen</AtomsHeadline>
     <div>
       <!-- Component: Alternative changelog feed with images -->
-      <h3>Berufserfahrung</h3>
+      <AtomsHeadline level="h3">Berufserfahrung</AtomsHeadline>
       <Feed :feed="workExperience" class="mb-10" />
-      <h3>Ausbildung</h3>
-      <Feed :feed="educationExperience" :smaller="true" class="mb-10" />
+      <AtomsHeadline level="h3">Ausbildung</AtomsHeadline>
+      <Feed :feed="educationExperience" class="mb-10" />
       <!-- End Alternative changelog feed with images -->
-      <h3>Kenntnisse & Fähigkeiten</h3>
-      <h3>Sprachen</h3>
+      <AtomsHeadline level="h3">Kenntnisse & Fähigkeiten</AtomsHeadline>
+      <AtomsHeadline level="h3">Sprachen</AtomsHeadline>
     </div>
-    <h3>Ausbildung</h3>
   </div>
 </template>
 
@@ -92,24 +91,24 @@ const educationExperience: Experience[] = [
     ],
     highlight: true,
   },
-  {
-    title: "Technische Mathematik",
-    company: "Johannes Kepler Universität",
-    date: "Okt. 2019 - Juni 2020",
-    description: ["Wechsel aufgrund großem Interesse für Web Development"],
-  },
-  {
-    title: "Abendgymnasium Linz",
-    date: "Sept. 2017 - Juli 2019",
-  },
-  {
-    title: "Reha & Krankrenhaus",
-    date: "Februar 2016 - Sept. 2017",
-  },
-  {
-    title: "BRG Hamerlingstraße",
-    date: "Juli 2021 - Aug. 2022",
-    description: ["Schwerpunkt Musisch Kreative Klasse"],
-  },
+  // {
+  //   title: "Technische Mathematik",
+  //   company: "Johannes Kepler Universität",
+  //   date: "Okt. 2019 - Juni 2020",
+  //   description: ["Wechsel aufgrund großem Interesse für Web Development"],
+  // },
+  // {
+  //   title: "Abendgymnasium Linz",
+  //   date: "Sept. 2017 - Juli 2019",
+  // },
+  // {
+  //   title: "Reha & Krankrenhaus",
+  //   date: "Februar 2016 - Sept. 2017",
+  // },
+  // {
+  //   title: "BRG Hamerlingstraße",
+  //   date: "Juli 2021 - Aug. 2022",
+  //   description: ["Schwerpunkt Musisch Kreative Klasse"],
+  // },
 ];
 </script>

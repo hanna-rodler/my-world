@@ -7,14 +7,22 @@ export default {
     "./plugins/**/*.{js,ts}",
     "./app.vue",
     "./error.vue",
+    "./nuxt.config.{js,ts}",
   ],
   theme: {
     extend: {
+      fontFamily: {
+        oxygen: ["Oxygen", "ui-sans-serif", "sans-serif"],
+        general: ["Source Sans 3", "ui-sans-serif", "sans-serif"],
+        test: ["Oxygen", "Source Sans 3", "ui-sans-serif", "sans-serif"],
+      },
       width: {
         "4xl": "52rem", // 832px
         "5xl": "64rem", // 1024px
       },
       height: {
+        90: "22.5rem", // 360px
+        100: "25rem", // 400px
         120: "30rem", // 480px
       },
       theme: {
