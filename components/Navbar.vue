@@ -1,4 +1,12 @@
 <template>
+  <!-- TODO: lowest: contact is active -->
+  <!-- TODO: margins -->
+  <!-- TODO: alt -->
+  <!--  TODO: fonts -->
+  <!-- TODO: stop animate-bounce? -->
+  <!-- TODO: mobile check -->
+  <!--  TODO: curtain -->
+  <!-- TODO: footer impressum on bottom -->
   <header
     class="z-20 w-full border-b border-slate-50 shadow-lg after:absolute after:left-0 after:top-full after:z-10 after:block after:h-px after:w-full after:bg-slate-200 md:border-slate-100 md:backdrop-blur-sm md:after:hidden md:flex md:justify-center text-black sticky top-0 bg-white"
   >

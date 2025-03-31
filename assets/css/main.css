@@ -26,8 +26,12 @@ background: linear-gradient(90deg, rgba(255,140,0,1) 0%, rgba(234,51,143,1) 52%,
     @apply bg-gradient-to-r from-orange via-pink to-blue;
 }
 
+.bg-gradient-main-lighter {
+    @apply bg-gradient-to-r from-orange/30 via-pink/30 to-blue/30;
+}
+
 .text-gradient-main {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-orange via-pink to-blue;
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-orange via-pink to-blue drop-shadow-2xl;
 }
 
 .card {
@@ -59,3 +63,34 @@ background: linear-gradient(90deg, rgba(255,140,0,1) 0%, rgba(234,51,143,1) 52%,
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
     animation: shine 3s infinite linear;
 }
+
+.curtain__panel {
+    @apply bg-orange w-1/2 h-screen relative z-20;
+    float: left;
+    transition: all 1s ease-out;
+}
+
+.curtain__checkbox {
+    @apply absolute cursor-pointer w-full h-full z-50;
+    opacity: 0;
+}
+
+/* Slide the first panel in */
+input[type=checkbox]:checked ~ div.curtain__panel--left {
+    transform: translateX(0);
+  }
+          
+  /* Slide the second panel in */
+  input[type=checkbox]:checked ~ div.curtain__panel--right {
+    transform: translateX(0);
+  }
+
+  /* Slide the panel to the left out of the container */
+.curtain__panel--left {
+    transform: translateX(-100%);
+  }
+  
+  /* Slide the panel to the right out of the container */
+  .curtain__panel--right {
+    transform: translateX(100%);
+  }
