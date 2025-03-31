@@ -1,0 +1,11 @@
+.container-plain  {
+    @apply max-w-full sm:w-3xl md:w-4xl lg:w-5xl mx-auto px-4 md:px-2 lg:px-0;
+}
+
+.section {
+    @apply container-plain my-14 md:my-48;
+}
+
+.container {
+    @apply flex md:justify-center md:items-center container-plain;
+}

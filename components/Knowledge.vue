@@ -1,14 +1,57 @@
 <template>
-  <div class="container my-5 flex-col" id="knowledge">
+  <div class="section flex-col" id="knowledge">
     <AtomsHeadline level="h2">Lebensweg & Wissen</AtomsHeadline>
     <div>
       <!-- Component: Alternative changelog feed with images -->
       <AtomsHeadline level="h3">Berufserfahrung</AtomsHeadline>
-      <Feed :feed="workExperience" class="mb-10" />
+      <Feed :feed="workExperience" class="mb-14" />
       <AtomsHeadline level="h3">Ausbildung</AtomsHeadline>
-      <Feed :feed="educationExperience" class="mb-10" />
+      <Feed :feed="educationExperience" class="mb-14" />
       <!-- End Alternative changelog feed with images -->
       <AtomsHeadline level="h3">Kenntnisse & Fähigkeiten</AtomsHeadline>
+      <div>
+        <!-- Component: Progress bar 50% with inside label -->
+        <div class="my-2">
+          CSS / SCSS
+          <div class="relative w-full">
+            <label
+              id="p02d-label"
+              for="p02d"
+              class="absolute top-0 left-0 block w-1/2 mb-0 text-xs text-center text-white"
+              ><span class="sr-only">CSS / SCSS</span> 95%</label
+            >
+            <progress
+              aria-labelledby="p02d-label"
+              id="p02d"
+              max="100"
+              value="95"
+              class="block w-full overflow-hidden bg-slate-100 [&::-webkit-progress-bar]:bg-slate-100 [&::-webkit-progress-value]:bg-blue [&::-moz-progress-bar]:bg-blue rounded-full"
+            >
+              95%
+            </progress>
+          </div>
+        </div>
+        <!-- Component: Progress bar 100% with inside label -->
+        <div class="relative w-full">
+          <label
+            id="p04d-label"
+            for="p04d"
+            class="absolute top-0 left-0 block w-full mb-0 text-xs text-center text-white"
+            ><span class="sr-only">uploading</span> 100%</label
+          >
+          <progress
+            aria-labelledby="p04d-label"
+            id="p04d"
+            max="100"
+            value="100"
+            class="block w-full overflow-hidden rounded bg-slate-100 [&::-webkit-progress-bar]:bg-slate-100 [&::-webkit-progress-value]:bg-blue [&::-moz-progress-bar]:bg-blue"
+          >
+            100%
+          </progress>
+        </div>
+        <!-- End Progress bar 100% with inside label -->
+        <!-- End Progress bar 50% with inside label -->
+      </div>
       <AtomsHeadline level="h3">Sprachen</AtomsHeadline>
     </div>
   </div>

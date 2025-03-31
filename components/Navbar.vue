@@ -2,7 +2,9 @@
   <header
     class="z-20 w-full border-b border-slate-50 shadow-lg after:absolute after:left-0 after:top-full after:z-10 after:block after:h-px after:w-full after:bg-slate-200 md:border-slate-100 md:backdrop-blur-sm md:after:hidden md:flex md:justify-center text-black sticky top-0 bg-white"
   >
-    <div class="relative max-w-full md:w-5xl mx-auto px-4 lg:px-0">
+    <div
+      class="relative max-w-full sm:w-3xl md:w-4xl lg:w-5xl mx-auto px-4 lg:px-0"
+    >
       <nav
         aria-label="main navigation"
         class="flex h-20 items-stretch justify-between font-medium text-slate-800"
@@ -13,7 +15,7 @@
           aria-label="HJR logo"
           aria-current="page"
           class="flex items-center gap-2 whitespace-nowrap py-3 text-lg focus:outline-none md:flex-1"
-          href="./"
+          :href="getHomeHref"
         >
           <NuxtImg
             src="/images/Logo.svg"
@@ -28,7 +30,7 @@
             'visible opacity-100 [&_span:nth-child(1)]:w-6 [&_span:nth-child(1)]:translate-y-0 [&_span:nth-child(1)]:rotate-45 [&_span:nth-child(2)]:-rotate-45 [&_span:nth-child(3)]:w-0':
               isToggleOpen,
           }"
-          @click="toggleMenu"
+          @click="toggleMenu()"
           :aria-expanded="isToggleOpen ? 'true' : 'false'"
           aria-label="Toggle navigation"
         >
@@ -58,36 +60,45 @@
             'invisible opacity-0': !isToggleOpen,
           }"
         >
-          <li role="none" class="navitem">
+          <li
+            role="none"
+            class="navitem"
+            :class="{ active: activeSection == 'about' }"
+          >
             <a
               role="menuitem"
               aria-haspopup="false"
-              class="focus:text-blue focus:outline-none focus-visible:outline-none"
               href="./#about"
+              @click="scrollToSection('about', $event)"
             >
               <span class="">Über mich</span>
-              <!-- <div
-                class="absolute bottom-0 left-0 w-20 h-2 bg-gradient-to-r from-orange via-pink to-blue rounded-tl-xl rounded-br-xl"
-              ></div> -->
             </a>
           </li>
-          <li role="none" class="navitem">
+          <li
+            role="none"
+            class="navitem"
+            :class="{ active: activeSection === 'knowledge' }"
+          >
             <a
               role="menuitem"
               aria-current="page"
               aria-haspopup="false"
-              class="focus:text-blue focus:outline-none focus-visible:outline-none"
               href="./#knowledge"
+              @click="scrollToSection('knowledge', $event)"
             >
               <span>Lebensweg & Wissen</span>
             </a>
           </li>
-          <li role="none" class="navitem">
+          <li
+            role="none"
+            class="navitem"
+            :class="{ active: activeSection === 'contact' }"
+          >
             <a
               role="menuitem"
               aria-haspopup="false"
-              class="focus:text-blue focus:outline-none focus-visible:outline-none"
               href="./#contact"
+              @click="scrollToSection('contact', $event)"
             >
               <span>Kontakt</span>
             </a>
@@ -98,21 +109,63 @@
   </header>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      isToggleOpen: false,
-    };
-  },
-  methods: {
-    toggleMenu() {
-      this.isToggleOpen = !this.isToggleOpen;
-    },
-  },
-};
-</script>
+<script setup lang="ts">
+import { ref, onMounted, onUnmounted } from "vue";
+import { scrollToSection } from "~/utils/utils";
 
-<style scoped>
-/* Add your styles here if needed */
-</style>
+const activeSection = ref(null);
+const isToggleOpen = ref(false);
+
+const sections = [
+  { id: "introduction", name: "Home" },
+  { id: "about", name: "Über mich" },
+  { id: "knowledge", name: "Lebensweg & Wissen" },
+  { id: "contact", name: "Kontakt" },
+];
+const route = useRoute();
+const getHomeHref = computed(() => {
+  const homeHref = route.path.replace(/\/$/, "");
+  const isHome = homeHref === "/" || homeHref === "";
+  if (isHome) {
+    return "#introduction";
+  } else {
+    return "./";
+  }
+});
+const navbarHeight = 120;
+
+const updateActiveSection = () => {
+  const scrollPosition = window.scrollY;
+  let currentSection = null;
+
+  sections.forEach((section) => {
+    const element = document.getElementById(section.id);
+    if (element) {
+      const offsetTop = element.offsetTop;
+      const offsetHeight = element.offsetHeight;
+
+      if (
+        scrollPosition >= offsetTop - navbarHeight &&
+        scrollPosition < offsetTop + offsetHeight
+      ) {
+        currentSection = section.id;
+      }
+    }
+  });
+
+  activeSection.value = currentSection;
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", updateActiveSection);
+  updateActiveSection();
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", updateActiveSection);
+});
+
+function toggleMenu() {
+  isToggleOpen.value = !isToggleOpen.value;
+}
+</script>

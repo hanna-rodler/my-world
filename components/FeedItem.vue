@@ -25,7 +25,7 @@
         v-if="item.description && item.description.length >= 2"
         class="pl-5 list-disc marker:text-blue"
       >
-        <li v-for="(desc, index) in item.description" :key="index">
+        <li v-for="(desc, index) in item.description" :key="index" class="my-1">
           {{ desc }}
         </li>
       </ul>

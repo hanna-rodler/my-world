@@ -1,10 +1,14 @@
 .navitem {
-    @apply flex items-stretch md:items-center gap-2 py-4 md:py-0 md:mx-4 md:relative lg:mx-8;
+    @apply flex items-stretch md:items-center gap-2 py-4 md:py-0 md:mx-2 md:relative lg:mx-4;
 }
 
 
-.navitem:hover {
-    @apply transition-all duration-200 text-black after:content-[''] after:absolute after:bottom-6  after:h-1.5 after:bg-gradient-to-r after:from-orange after:via-pink after:to-blue after:rounded-tl-xl after:rounded-br-xl;
+.navitem:hover, .navitem.active, .navitem a:focus {
+    @apply md:transition-all md:duration-200 md:text-black after:content-[''] md:after:absolute md:after:bottom-6  md:after:h-1.5 md:after:bg-gradient-to-r md:after:from-orange md:after:via-pink md:after:to-blue md:after:rounded-tl-xl md:after:rounded-br-xl;
+}
+
+.navitem a {
+    @apply py-2 px-2;
 }
 
 .navitem::after {

@@ -17,6 +17,7 @@ export default {
         test: ["Oxygen", "Source Sans 3", "ui-sans-serif", "sans-serif"],
       },
       width: {
+        "3xl": "48rem", // 768px
         "4xl": "52rem", // 832px
         "5xl": "64rem", // 1024px
       },
