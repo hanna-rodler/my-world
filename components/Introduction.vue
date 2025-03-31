@@ -58,7 +58,7 @@
           <Icon
             name="heroicons:chevron-double-down"
             size="42"
-            class="bg-gradient-main shiny-text"
+            class="bg-gradient-main shiny-text animate-bounce"
           />
         </div>
       </a>

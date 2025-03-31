@@ -8,51 +8,79 @@
       <AtomsHeadline level="h3">Ausbildung</AtomsHeadline>
       <Feed :feed="educationExperience" class="mb-14" />
       <!-- End Alternative changelog feed with images -->
-      <AtomsHeadline level="h3">Kenntnisse & Fähigkeiten</AtomsHeadline>
+
       <div>
-        <!-- Component: Progress bar 50% with inside label -->
-        <div class="my-2">
-          CSS / SCSS
-          <div class="relative w-full">
-            <label
-              id="p02d-label"
-              for="p02d"
-              class="absolute top-0 left-0 block w-1/2 mb-0 text-xs text-center text-white"
-              ><span class="sr-only">CSS / SCSS</span> 95%</label
+        <AtomsHeadline level="h3">Kenntnisse & Fähigkeiten</AtomsHeadline>
+        <div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 md:gap-8">
+          <div class="md:col-span-2 lg:col-span-1">
+            <!-- flex flex-col justify-between -->
+            <div class="w-[95%]">
+              <!-- Component: Progress bar 50% with inside label -->
+              <AtomsProgressBar
+                v-for="(skill, index) in codingSkills"
+                :key="index"
+                :skill="skill"
+              ></AtomsProgressBar>
+            </div>
+            <div class="mt-20 hidden md:block">
+              <span class="font-bold">Sprachen:</span> Deutsch (Muttersprache),
+              Englisch (C1), Spanisch (B1), Tschechisch (A1)
+            </div>
+            <!-- <AtomsLanguages class="hidden md:block mt-10"> </AtomsLanguages> -->
+          </div>
+          <div
+            class="md:col-span-3 lg:col-span-2 grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-3 xl:grid-cols-4 mt-10 md:mt-0"
+          >
+            <AtomsTag
+              v-for="(tag, index) in frontendSkills"
+              :key="index"
+              color="orange"
+              class="border-orange"
             >
-            <progress
-              aria-labelledby="p02d-label"
-              id="p02d"
-              max="100"
-              value="95"
-              class="block w-full overflow-hidden bg-slate-100 [&::-webkit-progress-bar]:bg-slate-100 [&::-webkit-progress-value]:bg-blue [&::-moz-progress-bar]:bg-blue rounded-full"
+              {{ tag }}
+            </AtomsTag>
+            <AtomsTag
+              v-for="(tag, index) in backendSkills"
+              :key="index"
+              class="border-red"
             >
-              95%
-            </progress>
+              {{ tag }}
+            </AtomsTag>
+            <AtomsTag
+              v-for="(tag, index) in cmsSkills"
+              :key="index"
+              class="border-pink"
+            >
+              {{ tag }}
+            </AtomsTag>
+            <AtomsTag
+              v-for="(tag, index) in otherTechnicalSkills"
+              :key="index"
+              class="border-purple"
+            >
+              {{ tag }}
+            </AtomsTag>
+            <AtomsTag
+              v-for="(tag, index) in other"
+              :key="index"
+              class="border-blue"
+            >
+              {{ tag }}
+            </AtomsTag>
           </div>
         </div>
-        <!-- Component: Progress bar 100% with inside label -->
-        <div class="relative w-full">
-          <label
-            id="p04d-label"
-            for="p04d"
-            class="absolute top-0 left-0 block w-full mb-0 text-xs text-center text-white"
-            ><span class="sr-only">uploading</span> 100%</label
-          >
-          <progress
-            aria-labelledby="p04d-label"
-            id="p04d"
-            max="100"
-            value="100"
-            class="block w-full overflow-hidden rounded bg-slate-100 [&::-webkit-progress-bar]:bg-slate-100 [&::-webkit-progress-value]:bg-blue [&::-moz-progress-bar]:bg-blue"
-          >
-            100%
-          </progress>
-        </div>
-        <!-- End Progress bar 100% with inside label -->
-        <!-- End Progress bar 50% with inside label -->
       </div>
-      <AtomsHeadline level="h3">Sprachen</AtomsHeadline>
+      <!-- <AtomsLanguages class="mt-10"> </AtomsLanguages> -->
+      <div class="mt-10 md:hidden">
+        <span class="font-bold">Sprachen:</span> Deutsch (Muttersprache),
+        Englisch (C1), Spanisch (B1), Tschechisch (A1)
+      </div>
+      <div
+        class="mt-10 md:mt-20 font-oxygen text-xl flex justify-self-center max-w-md"
+      >
+        "To be curious is to ask; to earn knowledge is to seek, struggle, and
+        grow beyond the answers.""
+      </div>
     </div>
   </div>
 </template>
@@ -153,5 +181,57 @@ const educationExperience: Experience[] = [
   //   date: "Juli 2021 - Aug. 2022",
   //   description: ["Schwerpunkt Musisch Kreative Klasse"],
   // },
+];
+
+const codingSkills = [
+  { name: "HTML", value: "100" },
+  { name: "CSS / SCSS", value: "95" },
+  { name: "JavaScript", value: "95" },
+  { name: "PHP", value: "85" },
+];
+
+const frontendSkills = [
+  "TailwindCSS",
+  "TypeScript",
+  "Vue.js",
+  "Nuxt.js",
+  "jQuery",
+  "Angular",
+  "React",
+];
+
+const backendSkills = [
+  "Symfony",
+  "PHP",
+  "XML/XSLT",
+  "Java",
+  "Laravel",
+  "REST",
+  "SOAP",
+  "SQL",
+  "NoSQL",
+];
+
+const cmsSkills = ["Storyblock", "Wordpress", "Typo3"];
+
+const otherTechnicalSkills = [
+  "AWS",
+  "Git",
+  "SEO",
+  "Linux",
+  "LLMs",
+  "Prompt Engineering",
+  "Web Accessibility",
+];
+
+const other = [
+  "Projektmanagement",
+  "Kundenbetreuung",
+  "UI/UX Design",
+  "Figma",
+  "Scrum",
+  "Jira",
+  "VSCode",
+  "IntelliJ",
 ];
 </script>

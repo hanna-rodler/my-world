@@ -41,6 +41,13 @@ export default {
         black: "#0c0c0c",
         white: "#fefefe",
         gray: "#363636",
+        red: "#f15062",
+        purple: "#9c449f",
+        dirtyPurple: "#7C6474",
+        bgBlue: "#0a4989",
+        gray: {
+          purple: "#BDA3AC",
+        },
       },
       borderWidth: {
         6: "6px",
