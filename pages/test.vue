@@ -1,3 +1,1 @@
-<template>
-  <Curtain />
-</template>
+<template></template>
