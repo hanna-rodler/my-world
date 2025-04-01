@@ -1,5 +1,5 @@
 <template>
-  <div class="container-plain my-10">
+  <div class="container-plain my-20">
     <h1 class="mb-5 mt-2 md:mb-10 md:mt-4">Impressum</h1>
     <div class="impressum">
       <div>

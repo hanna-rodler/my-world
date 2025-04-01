@@ -4,7 +4,7 @@
 @import './components/_curtain.css';
 
 body {
-    @apply text-black font-test bg-white;
+    @apply text-black font-general bg-white;
 }
 
 a.link {
@@ -22,7 +22,7 @@ background: linear-gradient(90deg, rgba(255,140,0,1) 0%, rgba(234,51,143,1) 52%,
     -webkit-text-fill-color: transparent;
   }
 
-  .bg-gradient-main-lighter {
+.bg-gradient-main-lighter {
     @apply bg-gradient-to-r from-orange/30 via-pink/30 to-blue/30;
 }
 

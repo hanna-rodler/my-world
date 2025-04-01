@@ -13,8 +13,7 @@ export default {
     extend: {
       fontFamily: {
         oxygen: ["Oxygen", "ui-sans-serif", "sans-serif"],
-        general: ["Source Sans 3", "ui-sans-serif", "sans-serif"],
-        test: ["Oxygen", "Source Sans 3", "ui-sans-serif", "sans-serif"],
+        general: ["Source-Sans-3", "ui-sans-serif", "sans-serif"],
       },
       width: {
         "3xl": "48rem", // 768px

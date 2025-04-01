@@ -1,6 +1,5 @@
 <template>
   <div class="container-plain" style="margin-top: 0" id="introduction">
-    <!-- TODO: Schrift einbinden -->
     <div
       class="flex flex-col md:grid md:grid-cols-2 md:grid-rows-1 md:gap-x-4 md:h-[80vh]"
     >
@@ -8,9 +7,7 @@
         <AtomsHeadline level="h1" levelStyle="gradient">
           Hanna Julia
         </AtomsHeadline>
-        <AtomsHeadline level="h2" class="font-light"
-          >Web Developer</AtomsHeadline
-        >
+        <div>Web Developer</div>
       </div>
       <div class="w-full flex items-center justify-center">
         <div class="relative w-60 h-90 md:w-80 md:h-120 group md:mr-5">
@@ -20,12 +17,12 @@
           <NuxtImg
             class="rounded-2xl sm:rounded-3xl absolute w-full h-full group-hover:-translate-x-2 group-hover:-translate-y-2 transition-transform duration-300"
             src="/images/me.webp"
-            alt="Hanna Julia"
+            alt="Bild von Hanna Julia"
             width="320"
             height="480"
             aspect-ratio="1.5"
           >
-            <!-- // TODO: webp default jpg -->
+            <!-- // TODO: webp default jpg. TODO: kleineres Bild -->
           </NuxtImg>
         </div>
       </div>
@@ -34,16 +31,17 @@
           <AtomsHeadline level="h1" levelStyle="gradient">
             Hanna Julia
           </AtomsHeadline>
-          <AtomsHeadline level="h2" class="font-light"
-            >Web Developer</AtomsHeadline
-          >
+          <div>Web Developer</div>
         </div>
         <div class="md:mt-12">
           Ob in meiner Masterarbeit, meiner Arbeit oder bei Hobby Projekten -
           für mich geht es bei Technik um den Menschen. Ich entwickle
           leidenschaftlich Lösungen bei denen der User an erster Stelle steht.
           Technik soll für den Menschen und mit den Menschen geschaffen werden,
-          sie soll den Menschen neues ermöglichen, altes vereinfachen und ......
+          sie soll den Menschen neues ermöglichen, altes vereinfachen und
+          inspirieren, anstatt zu begrenzen. Sie soll intuitive und zugängliche
+          Erlebnisse schaffen, die den Alltag bereichern und die Zukunft
+          gestalten.
         </div>
       </div>
     </div>

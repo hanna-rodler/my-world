@@ -75,11 +75,19 @@
         <span class="font-bold">Sprachen:</span> Deutsch (Muttersprache),
         Englisch (C1), Spanisch (B1), Tschechisch (A1)
       </div>
-      <div
-        class="mt-10 md:mt-20 font-oxygen text-xl flex justify-self-center max-w-md"
-      >
-        "To be curious is to ask; to earn knowledge is to seek, struggle, and
-        grow beyond the answers.""
+      <div class="flex w-full justify-center items-center mt-14 md:mt-40">
+        <div
+          class="max-w-md space-y-8 flex flex-col items-center justify-center"
+        >
+          <div class="w-full rounded-full h-0.5 bg-gradient-main"></div>
+          <div class="text-2xl flex font-light text-center">
+            "To be curious is to ask; to earn knowledge is to seek, struggle,
+            and grow beyond the answers."
+          </div>
+          <div
+            class="w-full rounded-full h-0.5 bg-gradient-main item-center"
+          ></div>
+        </div>
       </div>
     </div>
   </div>
