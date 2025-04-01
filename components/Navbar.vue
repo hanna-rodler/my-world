@@ -165,9 +165,10 @@ const updateActiveSection = () => {
         const offsetHeight = element.offsetHeight;
 
         // if the bottom of the page was reached, the currentSection should be set to 'contact'
+        console.log("is first time ", firstTimeVisit.value);
         if (
           !firstTimeVisit.value &&
-          scrollPosition + 200 + window.innerHeight >=
+          scrollPosition + 300 + window.innerHeight >=
             document.body.scrollHeight
         ) {
           currentSection = "contact";
@@ -181,6 +182,7 @@ const updateActiveSection = () => {
       }
     });
 
+    console.log("@currentSection", currentSection);
     activeSection.value = currentSection;
   }
 };
@@ -189,6 +191,7 @@ function scrollToSection(sectionId: string, event: Event) {
   isScrolling.value = true;
   event.preventDefault();
   activeSection.value = sectionId;
+  // console.log("scroll to ", sectionId);
 
   const section = document.getElementById(sectionId);
   if (section) {
