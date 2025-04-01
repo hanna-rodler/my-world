@@ -21,5 +21,8 @@ export default defineNuxtConfig({
       global: true,
     },
   ],
+  // nitro: {
+  //   preset: "node-server",
+  // },
   modules: ["@nuxt/image", "@nuxt/icon", "@nuxtjs/tailwindcss"],
 });

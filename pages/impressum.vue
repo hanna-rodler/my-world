@@ -68,3 +68,7 @@
     </div>
   </div>
 </template>
+<script setup lang="ts">
+const showCurtainEffect = useState("showCurtainEffect");
+showCurtainEffect.value = false;
+</script>
