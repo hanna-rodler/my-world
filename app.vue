@@ -6,6 +6,8 @@
   <Footer v-show="!showCurtain"></Footer>
 </template>
 <script setup lang="ts">
+import { onMounted } from "vue";
+
 const showCurtain = useState<boolean>("showCurtain", () => false);
 const route = useRoute();
 const isOnRoot = route.path === "/" || route.path === "";
@@ -18,12 +20,6 @@ if (isOnRoot) {
 } else {
   showCurtain.value = false;
 }
-
-onMounted(() => {
-  console.log("mounted: show Curtain: ", showCurtain.value);
-});
-
-import { onMounted } from "vue";
 
 function scrollToSection(sectionId, event = null) {
   if (event) event.preventDefault();
@@ -63,6 +59,6 @@ useSeoMeta({
     "Hanna Julia Rodler ist eine Full-Stack Webentwicklerin aus Linz, spezialisiert auf moderne Webtechnologien und kreative digitale Lösungen.",
   ogDescription:
     "Hanna Julia Rodler ist eine Full-Stack Webentwicklerin aus Linz, spezialisiert auf moderne Webtechnologien und kreative digitale Lösungen.",
-  ogImage: "https://hannajuliarodler.com/_ipx/s_320x480/images/me.webp",
+  ogImage: "https://hannajuliarodler.com/_ipx/s_320x480/images/HJRodler.png",
 });
 </script>

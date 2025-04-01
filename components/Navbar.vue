@@ -130,11 +130,9 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
-// import { scrollToSection } from "~/utils/utils";
 
 const isToggleOpen = ref(false);
 const isMobile = ref(false);
-console.log("is mobile ", isMobile.value);
 const firstTimeVisit = ref(true);
 
 const sections = [

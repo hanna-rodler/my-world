@@ -1,3 +1,0 @@
-<template>
-  <Curtain />
-</template>

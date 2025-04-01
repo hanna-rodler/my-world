@@ -65,7 +65,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { scrollToSection } from "~/utils/utils";
-</script>
