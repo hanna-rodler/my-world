@@ -55,4 +55,14 @@ onMounted(() => {
     }, 2000);
   });
 });
+
+useSeoMeta({
+  title: "Hanna Julia Rodler",
+  ogTitle: "Hanna Julia Rodler | Web Developer",
+  description:
+    "Hanna Julia Rodler ist eine Full-Stack Webentwicklerin aus Linz, spezialisiert auf moderne Webtechnologien und kreative digitale Lösungen.",
+  ogDescription:
+    "Hanna Julia Rodler ist eine Full-Stack Webentwicklerin aus Linz, spezialisiert auf moderne Webtechnologien und kreative digitale Lösungen.",
+  ogImage: "https://hannajuliarodler.com/_ipx/s_320x480/images/me.webp",
+});
 </script>
