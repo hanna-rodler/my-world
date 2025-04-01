@@ -1,6 +1,4 @@
 <template>
-  <!-- TODO: active status mobile -->
-  <!-- TODO: navbar on impressum <- middleware? -->
   <!-- TODO: mobile check -->
   <!-- (TODO: footer impressum on bottom )-->
   <!-- (TODO: stop animate-bounce?) -->
@@ -20,7 +18,7 @@
           aria-label="HJR logo"
           aria-current="page"
           class="flex items-center gap-2 whitespace-nowrap py-3 text-lg focus:outline-none md:flex-1"
-          :href="isOnHome ? '#introduction' : './home#introduction'"
+          :href="'./home#introduction'"
           @click="
             isOnHome
               ? scrollToSection('introduction', $event)
@@ -79,7 +77,7 @@
             <a
               role="menuitem"
               aria-haspopup="false"
-              :href="isOnHome ? 'about' : './home#about'"
+              :href="isOnHome ? '#about' : './home#about'"
               @click="
                 isOnHome ? scrollToSection('about', $event) : './home#about'
               "
@@ -98,7 +96,7 @@
               role="menuitem"
               aria-current="page"
               aria-haspopup="false"
-              :href="isOnHome ? '' : './home#knowledge'"
+              :href="isOnHome ? './home#knowledge' : './home#knowledge'"
               @click="
                 isOnHome
                   ? scrollToSection('knowledge', $event)
@@ -116,7 +114,7 @@
             <a
               role="menuitem"
               aria-haspopup="false"
-              :href="isOnHome ? 'contact' : './home#contact'"
+              :href="isOnHome ? '#contact' : './home#contact'"
               @click="
                 isOnHome ? scrollToSection('contact', $event) : './home#contact'
               "
@@ -134,7 +132,6 @@
 import { ref, onMounted, onUnmounted } from "vue";
 // import { scrollToSection } from "~/utils/utils";
 
-const activeSection = ref<string | null>(null);
 const isToggleOpen = ref(false);
 const isMobile = ref(false);
 console.log("is mobile ", isMobile.value);
@@ -151,7 +148,8 @@ const isOnHome = computed(() => {
   return route.path === "/home";
 });
 const navbarHeight = 120;
-const isScrolling = ref<boolean>(false);
+const isScrolling = useState<boolean>("isScrolling");
+const activeSection = useState<string | null>("activeSection");
 
 const updateActiveSection = () => {
   if (!isScrolling.value) {
@@ -181,6 +179,9 @@ const updateActiveSection = () => {
       }
     });
 
+    if (currentSection !== null) {
+      history.replaceState(null, "", `#${currentSection}`);
+    }
     activeSection.value = currentSection;
   }
 };
@@ -194,6 +195,8 @@ function scrollToSection(sectionId: string, event: Event) {
   if (section) {
     const offsetTop = section.offsetTop - 120; // Adjust for fixed header height
     window.scrollTo({ top: offsetTop, behavior: "smooth" });
+
+    history.replaceState(null, "", `#${sectionId}`);
   }
   if (isMobile.value) {
     toggleMenu();
@@ -208,13 +211,6 @@ onMounted(() => {
   if (!isScrolling.value) {
     updateActiveSection();
   }
-  // TODO: resize listen + throttle
-  window.addEventListener("resize", () => {
-    setTimeout(() => {
-      console.log("listen resize");
-      isMobile.value = window.innerWidth < 767;
-    }, 2000);
-  });
 });
 
 onUnmounted(() => {
