@@ -8,9 +8,7 @@
         <AtomsHeadline level="h1" levelStyle="gradient">
           Hanna Julia
         </AtomsHeadline>
-        <AtomsHeadline level="h2" class="font-light"
-          >Web Developer</AtomsHeadline
-        >
+        <div>Web Developer</div>
       </div>
       <div class="w-full flex items-center justify-center">
         <div class="relative w-60 h-90 md:w-80 md:h-120 group md:mr-5">
@@ -20,12 +18,12 @@
           <NuxtImg
             class="rounded-2xl sm:rounded-3xl absolute w-full h-full group-hover:-translate-x-2 group-hover:-translate-y-2 transition-transform duration-300"
             src="/images/me.webp"
-            alt="Hanna Julia"
+            alt="Bild von Hanna Julia"
             width="320"
             height="480"
             aspect-ratio="1.5"
           >
-            <!-- // TODO: webp default jpg -->
+            <!-- // TODO: webp default jpg. TODO: kleineres Bild -->
           </NuxtImg>
         </div>
       </div>
@@ -34,9 +32,7 @@
           <AtomsHeadline level="h1" levelStyle="gradient">
             Hanna Julia
           </AtomsHeadline>
-          <AtomsHeadline level="h2" class="font-light"
-            >Web Developer</AtomsHeadline
-          >
+          <div>Web Developer</div>
         </div>
         <div class="md:mt-12">
           Ob in meiner Masterarbeit, meiner Arbeit oder bei Hobby Projekten -
