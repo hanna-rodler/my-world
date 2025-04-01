@@ -1,16 +1,19 @@
 .navitem {
-    @apply flex items-stretch md:items-center gap-2 py-4 md:py-0 md:mx-2 md:relative lg:mx-4;
+    @apply md:flex items-stretch md:items-center gap-2 py-4 md:py-0 md:mx-2 relative lg:mx-4;
 }
 
+@media (min-width: 768px) {
+  .navitem:hover, .navitem.active {
+      @apply after:content-[''] after:absolute after:bottom-6 after:h-1.5 after:bg-gradient-to-r after:from-orange after:via-pink after:to-blue after:rounded-tl-xl after:rounded-br-xl after:left-0 after:w-full;
+  }
+}
 
-.navitem:hover, .navitem.active, .navitem a:focus {
-    @apply md:transition-all md:duration-200 md:text-black after:content-[''] md:after:absolute md:after:bottom-6  md:after:h-1.5 md:after:bg-gradient-to-r md:after:from-orange md:after:via-pink md:after:to-blue md:after:rounded-tl-xl md:after:rounded-br-xl;
+@media (max-width: 767px) {
+    .navitem.active a::after {
+        @apply content-[''] absolute bottom-0 h-1.5 bg-gradient-to-r from-orange via-pink to-blue rounded-tl-xl rounded-br-xl left-0 w-full;
+    }
 }
 
 .navitem a {
-    @apply py-2 px-2;
-}
-
-.navitem::after {
-    width: 100%; /* Ensure the hover effect matches the width of the navitem */
+    @apply inline-flex w-fit py-2 px-2 relative;
 }

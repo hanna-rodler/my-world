@@ -189,7 +189,6 @@ function scrollToSection(sectionId: string, event: Event) {
   isScrolling.value = true;
   event.preventDefault();
   activeSection.value = sectionId;
-  route.params.isSectionActive = "true"; // Update the route params with the section ID
 
   const section = document.getElementById(sectionId);
   if (section) {
