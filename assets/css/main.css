@@ -30,8 +30,23 @@ background: linear-gradient(90deg, rgba(255,140,0,1) 0%, rgba(234,51,143,1) 52%,
     @apply bg-gradient-to-r from-orange via-pink to-blue;
 }
 
+.bg-gradient-light-left {
+    @apply bg-gradient-to-r from-orange/30 to-pink/30 ;
+}
+
+.bg-gradient-light-right {
+    @apply bg-gradient-to-r from-pink/30 to-blue/30;
+}
+
 .text-gradient-main {
     @apply text-transparent bg-clip-text bg-gradient-to-r from-orange via-pink to-blue;
+}
+
+.text-gradient-left {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-orange to-pink;
+}
+.text-gradient-right {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-pink to-blue;
 }
 
 .card {

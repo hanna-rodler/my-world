@@ -8,7 +8,8 @@
   <!--  TODO: curtain -->
   <!-- TODO: footer impressum on bottom -->
   <header
-    class="z-20 w-full border-b border-slate-50 shadow-lg after:absolute after:left-0 after:top-full after:z-10 after:block after:h-px after:w-full after:bg-slate-200 md:border-slate-100 md:backdrop-blur-sm md:after:hidden md:flex md:justify-center text-black sticky top-0 bg-white"
+    class="z-20 w-full border-b border-slate-50 shadow-lg after:absolute after:left-0 after:top-full after:z-10 after:block after:h-px after:w-full after:bg-slate-200 md:border-slate-100 md:backdrop-blur-sm md:after:hidden hidden md:justify-center text-black sticky top-0 bg-white"
+    :class="{ 'md:flex': !showCurtainEffect }"
   >
     <div
       class="relative max-w-full sm:w-3xl md:w-4xl lg:w-5xl mx-auto px-4 lg:px-0"
@@ -19,11 +20,28 @@
         role="navigation"
       >
         <a
+          v-if="getHomeHref === './'"
           id="HJR"
           aria-label="HJR logo"
           aria-current="page"
           class="flex items-center gap-2 whitespace-nowrap py-3 text-lg focus:outline-none md:flex-1"
           :href="getHomeHref"
+        >
+          <NuxtImg
+            src="/images/Logo.svg"
+            width="200"
+            height="200"
+            class="h-9 w-9"
+          ></NuxtImg>
+        </a>
+        <a
+          v-else
+          id="HJR"
+          aria-label="HJR logo"
+          aria-current="page"
+          class="flex items-center gap-2 whitespace-nowrap py-3 text-lg focus:outline-none md:flex-1"
+          :href="getHomeHref"
+          @click="scrollToSection('introduction', $event)"
         >
           <NuxtImg
             src="/images/Logo.svg"
@@ -123,6 +141,8 @@ import { scrollToSection } from "~/utils/utils";
 
 const activeSection = ref(null);
 const isToggleOpen = ref(false);
+const showCurtainEffect = useState("showCurtainEffect");
+console.log("showCurtainEffect ", showCurtainEffect);
 
 const sections = [
   { id: "introduction", name: "Home" },
