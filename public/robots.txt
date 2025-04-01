@@ -1,1 +1,11 @@
+# Allow all user agents to crawl the site
+User-agent: *
+Allow: /
 
+# Disallow crawling of specific directories or files
+Disallow: /private/
+Disallow: /admin/
+Disallow: /cgi-bin/
+
+# Specify the location of the sitemap
+Sitemap: https://www.hannajuliarodler.com/sitemap.xml
