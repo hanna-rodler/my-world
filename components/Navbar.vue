@@ -165,7 +165,6 @@ const updateActiveSection = () => {
         const offsetHeight = element.offsetHeight;
 
         // if the bottom of the page was reached, the currentSection should be set to 'contact'
-        console.log("is first time ", firstTimeVisit.value);
         if (
           !firstTimeVisit.value &&
           scrollPosition + 300 + window.innerHeight >=
@@ -182,7 +181,6 @@ const updateActiveSection = () => {
       }
     });
 
-    console.log("@currentSection", currentSection);
     activeSection.value = currentSection;
   }
 };
@@ -191,7 +189,6 @@ function scrollToSection(sectionId: string, event: Event) {
   isScrolling.value = true;
   event.preventDefault();
   activeSection.value = sectionId;
-  // console.log("scroll to ", sectionId);
 
   const section = document.getElementById(sectionId);
   if (section) {
@@ -212,11 +209,12 @@ onMounted(() => {
     updateActiveSection();
   }
   // TODO: resize listen + throttle
-  window.addEventListener("resizse", () => {
-    console.log("listen resize");
-    isMobile.value = window.innerWidth < 767;
+  window.addEventListener("resize", () => {
+    setTimeout(() => {
+      console.log("listen resize");
+      isMobile.value = window.innerWidth < 767;
+    }, 2000);
   });
-  isMobile.value = window.innerWidth < 767;
 });
 
 onUnmounted(() => {
