@@ -1,6 +1,5 @@
 <template>
   <div class="container-plain" style="margin-top: 0" id="introduction">
-    <!-- TODO: Schrift einbinden -->
     <div
       class="flex flex-col md:grid md:grid-cols-2 md:grid-rows-1 md:gap-x-4 md:h-[80vh]"
     >
@@ -39,7 +38,10 @@
           für mich geht es bei Technik um den Menschen. Ich entwickle
           leidenschaftlich Lösungen bei denen der User an erster Stelle steht.
           Technik soll für den Menschen und mit den Menschen geschaffen werden,
-          sie soll den Menschen neues ermöglichen, altes vereinfachen und ......
+          sie soll den Menschen neues ermöglichen, altes vereinfachen und
+          inspirieren, anstatt zu begrenzen. Sie soll intuitive und zugängliche
+          Erlebnisse schaffen, die den Alltag bereichern und die Zukunft
+          gestalten.
         </div>
       </div>
     </div>

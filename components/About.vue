@@ -1,10 +1,12 @@
 <template>
   <div class="section" id="about" style="margin-top: 5rem">
     <AtomsHeadline level="h2">Über mich</AtomsHeadline>
-    <div class="md:w-1/2 my-10">
-      Ich war immer schon wissbegierig. Wollte immer schon wissen wie Dinge
-      funtionieren & sie verstehen. Ich bin immer interessiert an neuen
-      Herausforderungen und an was zum Tüfteln.
+    <div class="flex md:justify-center my-10">
+      <div class="md:text-center md:w-2/3">
+        Ich war immer schon wissbegierig. Wollte immer schon wissen wie Dinge
+        funtionieren & sie verstehen. Ich bin immer interessiert an neuen
+        Herausforderungen und an was zum Tüfteln.
+      </div>
     </div>
     <div>
       <AtomsHeadline level="h3">Was mir Freude macht</AtomsHeadline>
