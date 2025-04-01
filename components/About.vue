@@ -10,9 +10,9 @@
       <AtomsHeadline level="h3">Was mir Freude macht</AtomsHeadline>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-5">
         <div>
-          <img
+          <NuxtImg
             src="/images/icons/sing.svg"
-            alt="Singen"
+            alt="Mikrofon mit Musiknoten"
             class="w-14 h-14 text-pink"
           />
           <h5 class="mt-2 mb-1 text-lg font-oxygen">Singen</h5>
@@ -23,9 +23,9 @@
           </p>
         </div>
         <div>
-          <img
+          <NuxtImg
             src="/images/icons/bike.svg"
-            alt="Singen"
+            alt="Rad"
             class="w-14 h-14 text-pink"
           />
           <h5 class="mt-2 mb-1 text-lg font-oxygen">Radfahren</h5>
@@ -36,9 +36,9 @@
           </p>
         </div>
         <div>
-          <img
+          <NuxtImg
             src="/images/icons/book.svg"
-            alt="Singen"
+            alt="offenes Buch"
             class="w-14 h-14 text-pink"
           />
           <h5 class="mt-2 mb-1 text-lg font-oxygen">Lesen & Schreiben</h5>
@@ -50,9 +50,9 @@
           </p>
         </div>
         <div>
-          <img
+          <NuxtImg
             src="/images/icons/pen.svg"
-            alt="Singen"
+            alt="Füllfeder"
             class="w-14 h-14 text-pink"
           />
           <h5 class="mt-2 mb-1 text-lg font-oxygen">Kalligraphie</h5>
@@ -63,9 +63,9 @@
           </p>
         </div>
         <div>
-          <img
+          <NuxtImg
             src="/images/icons/dance.svg"
-            alt="Singen"
+            alt="Tanzende Person mit Musiknoten um sich"
             class="w-14 h-14 text-pink"
           />
           <h5 class="mt-2 mb-1 text-lg font-oxygen">Tanzen</h5>
@@ -75,9 +75,9 @@
           </p>
         </div>
         <div>
-          <img
+          <NuxtImg
             src="/images/icons/music.svg"
-            alt="Singen"
+            alt="Noten"
             class="w-14 h-14 text-pink"
           />
           <h5 class="mt-2 mb-1 text-lg font-oxygen">Musik</h5>
