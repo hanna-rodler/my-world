@@ -59,7 +59,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useInputListener } from "~/composables/useInputListener";
-const { isInteracting, interactionType } = useInputListener();
+const { isInteracting } = useInputListener();
 
 const showCurtain = useState("showCurtain");
 

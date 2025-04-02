@@ -1,16 +1,14 @@
 <template>
   <div class="section" id="about" style="margin-top: 5rem">
     <AtomsHeadline level="h2">Über mich</AtomsHeadline>
-    <div class="flex md:justify-center my-10">
-      <div class="md:text-center md:w-2/3">
-        Ich war immer schon wissbegierig. Wollte immer schon wissen wie Dinge
-        funtionieren & sie verstehen. Ich bin immer interessiert an neuen
-        Herausforderungen und an was zum Tüfteln.
-      </div>
-    </div>
+    <AtomsParagraph class="mb-14">
+      Ich war immer schon wissbegierig. Wollte immer schon wissen wie Dinge
+      funktionieren und sie verstehen. Ich bin immer interessiert an neuen
+      Herausforderungen und an was zum Tüfteln.
+    </AtomsParagraph>
     <div>
       <AtomsHeadline level="h3">Was mir Freude macht</AtomsHeadline>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-9 md:gap-12 mt-5">
         <div>
           <NuxtImg
             src="/images/icons/sing.svg"
@@ -20,7 +18,7 @@
           <h5 class="mt-2 mb-1 text-lg font-oxygen">Singen</h5>
           <p>
             Ich singe leidenschaftlich gerne. Am liebsten mit meinen
-            Freund*innen, auch gerne alleine meistens zu Pop, Musical und Jazz
+            Freund*innen, auch gerne allein, meistens zu Pop, Musical und Jazz
             Liedern.
           </p>
         </div>
@@ -60,8 +58,8 @@
           <h5 class="mt-2 mb-1 text-lg font-oxygen">Kalligraphie</h5>
           <p>
             Alle Geburtstags-, Weihnachts- und sonstige Karten für Familie,
-            Freund*innen und Bekannte gestalte ich liebend gern selbst. Meine
-            persönliche Empfehlung für Kalligraphie Stifte? Ecoline Brush Pen.
+            Freund*innen und Bekannte gestalte ich liebend gern selbst. Meistens
+            gestalte ich meine Karten mit Brush Pens.
           </p>
         </div>
         <div>
@@ -84,7 +82,7 @@
           />
           <h5 class="mt-2 mb-1 text-lg font-oxygen">Musik</h5>
           <p>
-            Gitarre & Klavier spielen, im Bus, im Zug und beim Kochen Musik
+            Gitarre und Klavier spielen, im Bus, im Zug und beim Kochen Musik
             hören - das gehört zu meinen Leben.
           </p>
         </div>

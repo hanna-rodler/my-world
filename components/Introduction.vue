@@ -22,7 +22,6 @@
             height="480"
             aspect-ratio="1.5"
           >
-            <!-- // TODO: webp default jpg. TODO: kleineres Bild -->
           </NuxtImg>
         </div>
       </div>
