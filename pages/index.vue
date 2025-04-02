@@ -33,16 +33,16 @@
     ></div>
     <div
       v-show="!isOpen"
-      class="absolute left-1/2 animate-pulse h-6 w-6 -ml-3 rounded-full bg-dirtyPurple bottom-56"
+      class="absolute left-1/2 h-4 w-4 -ml-2 rounded-full bg-dirtyPurple bottom-56 z-10"
+    ></div>
+    <div
+      v-show="!isOpen"
+      class="absolute left-1/2 motion-safe:animate-pulse h-8 w-8 -ml-4 rounded-full opacity-80 bg-dirtyPurple bottom-[13.5rem]"
     ></div>
     <div
       v-show="!isOpen"
       class="absolute left-1/2 w-60 md:w-80 space-y-2 ml-[-7.5rem] md:-ml-40 bottom-20 transition-all duration-700"
     >
-      <!-- <div
-      class="absolute left-1/2 w-60 md:w-80 space-y-2 ml-[-7.5rem] md:-ml-40 bottom-20 animateMoveOutOfView bg-orange"
-      :class="{ '-translate-y-full opacity-0': isOpen }"
-    > -->
       <div class="bg-white text-xl md:text-3xl text-center py-2">
         Hanna Julia Rodler
       </div>
@@ -52,15 +52,25 @@
     </div>
   </div>
   <div v-show="!showCurtain" class="transition-all duration-700 ease-in">
+    <!-- HOME Content -->
     <Home></Home>
   </div>
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
+import { useInputListener } from "~/composables/useInputListener";
+const { isInteracting, interactionType } = useInputListener();
+
 const showCurtain = useState("showCurtain");
 
 const isOpen = ref(false);
 const hideCurtain = ref(false);
+
+watch(isInteracting, (newValue: boolean) => {
+  if (newValue && showCurtain && !isOpen.value) {
+    openCurtain();
+  }
+});
 
 const openCurtain = () => {
   setTimeout(() => {
