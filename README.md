@@ -2,7 +2,7 @@
 
 Personal website created with Nuxt.js.
 
-Check it out at [hannajuliarodler.com]([https://nuxt.com/docs/getting-started/introduction](https://www.hannajuliarodler.com/).
+Check it out at [hannajuliarodler.com](https://www.hannajuliarodler.com).
 
 ## Project setup
 
