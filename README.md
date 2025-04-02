@@ -4,6 +4,8 @@ Personal website created with Nuxt.js.
 
 Check it out at [hannajuliarodler.com](https://www.hannajuliarodler.com).
 
+Special feature: opening curtain.
+
 ## Project setup
 
 Install dependencies:
