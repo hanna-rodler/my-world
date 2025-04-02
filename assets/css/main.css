@@ -53,8 +53,8 @@ background: linear-gradient(90deg, rgba(255,140,0,1) 0%, rgba(234,51,143,1) 52%,
     @apply border-slate-50 border-2 shadow-md rounded-3xl py-12 flex items-center justify-center flex-col space-y-2;
 }
 
-.impressum > div, .impressum > div > div{
-    @apply my-4;
+.impressum > div, .impressum > div > div, .dsgvo > div, .dsgvo > div > div {
+    @apply mb-4 mt-2;
 }
 
 @keyframes shine {

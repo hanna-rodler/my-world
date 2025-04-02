@@ -40,10 +40,13 @@ export default {
         black: "#0c0c0c",
         white: "#fefefe",
         gray: "#363636",
-        red: "#f15062",
-        purple: "#9c449f",
+        red: "#f76939",
         dirtyPurple: "#7C6474",
         bgBlue: "#0a4989",
+        purple: {
+          light: "#b1409a",
+          dark: "#6d50a9",
+        },
         gray: {
           purple: "#BDA3AC",
         },

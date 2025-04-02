@@ -40,7 +40,7 @@
     font-weight: 300;
     font-display: swap;
     src: local('Oxygen'), 
-        url(../fonts/oxygen/300-normal.woff2) format('woff2');
+        url(../fonts/oxygen/oxygen-latin-300-normal.woff2) format('woff2');
 }
 
 @font-face {
@@ -49,7 +49,7 @@
     font-weight: 400;
     font-display: swap;
     src: local('Oxygen'), 
-        url(../fonts/oxygen/400-normal.woff2) format('woff2');
+        url(../fonts/oxygen/oxygen-latin-400-normal.woff2) format('woff2');
 }
 
 @font-face {
@@ -58,5 +58,5 @@
     font-weight: 700;
     font-display: swap;
     src: local('Oxygen'), 
-        url(../fonts/oxygen/700-normal.woff2) format('woff2');
+        url(../fonts/oxygen/oxygen-latin-700-normal.woff2) format('woff2');
 }

@@ -45,6 +45,8 @@ onMounted(() => {
     setTimeout(() => scrollToSection(sectionId), 10); // Delay to ensure DOM is ready
   }
 
+  isMobile.value = window.innerWidth < 767;
+
   window.addEventListener("resize", () => {
     setTimeout(() => {
       isMobile.value = window.innerWidth < 767;

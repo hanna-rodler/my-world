@@ -1,15 +1,19 @@
 <template>
-  <div id="contact" class="section flex flex-col">
+  <div id="contact" class="section">
     <AtomsHeadline level="h2">Kontaktiere mich!</AtomsHeadline>
+    <AtomsParagraph>
+      Hast du Fragen, Anregungen oder möchtest einfach nur Hallo sagen?<br />
+      Schreib mir gerne eine Nachricht!
+    </AtomsParagraph>
     <div class="grid md:grid-cols-2 grid-cols-1 gap-8 w-full mb-10 md:my-10">
-      <a href="mailto:haj.rodler@gmail.com" class="card">
+      <a href="mailto:contact@hannajuliarodler.com" class="card">
         <Icon
           name="heroicons:envelope"
           size="28"
           class="bg-gradient-main"
           alt="E-Mail"
         />
-        <span>haj.rodler[at]gmail.com</span>
+        <span>contact[at]hannajuliarodler.com</span>
       </a>
       <div class="card">
         <Icon

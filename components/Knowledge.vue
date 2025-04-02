@@ -1,6 +1,13 @@
 <template>
   <div class="section flex-col" id="knowledge">
     <AtomsHeadline level="h2">Lebensweg & Wissen</AtomsHeadline>
+    <AtomsParagraph class="mb-14">
+      Von Full-Stack Web Development über UI/UX Design, Projektmanagement und
+      Kommunikationswissenschaften - mein Studium an der FH Hagenberg bietet mir
+      eine breite interdisziplinäre Basis. Mein Top-Favorit ist das Web
+      Development, weshalb ich auch seit 2022 in dem Bereich arbeite. Am
+      liebsten arbiete ich interdisziplinär und im Team.
+    </AtomsParagraph>
     <div>
       <!-- Component: Alternative changelog feed with images -->
       <AtomsHeadline level="h3">Berufserfahrung</AtomsHeadline>
@@ -11,9 +18,24 @@
 
       <div>
         <AtomsHeadline level="h3">Kenntnisse & Fähigkeiten</AtomsHeadline>
+        <div class="mt-5 mb-7 md:mt-10 md:mb-14">
+          Am meisten habe ich bis jetzt mit Symfony, TailwindCSS, Vue.js,
+          Nuxt.js, TypeScript und dem Headless CMS Storyblok gearbeitet. Aber
+          auch mit anderen Programmiersprachen und Frameworks wie z.B. Laravel
+          habe ich bereits Projekte umgesetzt. Einen Überblick über die von mir
+          verwendeten Technologien findest du hier (
+          <span class="border-b-2 border-orange"> Frontend </span>,
+          <span class="border-b-2 border-red">Backend</span>,
+          <span class="border-b-2 border-pink">CMS</span>,
+          <span class="border-b-2 border-purple-light"
+            >Cloud Platforms & OS </span
+          >, <span class="border-b-2 border-purple-dark">AI / KI</span> und
+          <span class="border-b-2 border-blue">weitere</span>).
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 md:gap-8">
           <div class="md:col-span-2 lg:col-span-1">
             <!-- flex flex-col justify-between -->
+            <!-- TODO: Satz dazu schreiben. -->
             <div class="w-[95%]">
               <!-- Component: Progress bar 50% with inside label -->
               <AtomsProgressBar
@@ -42,7 +64,7 @@
             <AtomsTag
               v-for="(tag, index) in backendSkills"
               :key="index"
-              class="border-red"
+              class="border-[#f6673c]"
             >
               {{ tag }}
             </AtomsTag>
@@ -54,9 +76,16 @@
               {{ tag }}
             </AtomsTag>
             <AtomsTag
-              v-for="(tag, index) in otherTechnicalSkills"
+              v-for="(tag, index) in cloudPlattformSkills"
               :key="index"
-              class="border-purple"
+              class="border-purple-light"
+            >
+              {{ tag }}
+            </AtomsTag>
+            <AtomsTag
+              v-for="(tag, index) in aiSkills"
+              :key="index"
+              class="border-purple-dark"
             >
               {{ tag }}
             </AtomsTag>
@@ -146,7 +175,7 @@ const workExperience: Experience[] = [
     company: "TRUMPF Maschinen Austria",
     date: "Juli 2015",
     description: [
-      "Kennzahlen/Auswertungen von div. Schulungen Übersetzung von Texten, Mails und Präsentationen (englisch <-> deutsch) Erstellen von lnformationsbroschüren, Fragebögen zur Bewertung der Schulungseffektivität usw.",
+      "Kennzahlen/Auswertungen von div. Schulungen Übersetzung von Texten, Mails und Präsentationen (englisch <-> deutsch) Erstellen von Informationsbroschüren, Fragebögen zur Bewertung der Schulungseffektivität usw.",
     ],
   },
 ];
@@ -160,7 +189,7 @@ const educationExperience: Experience[] = [
     highlight: true,
   },
   {
-    title: "Bachelor: Kommunikation, Wissen, Median",
+    title: "Bachelor: Kommunikation, Wissen, Medien",
     company: "FH Hagenberg",
     date: "Okt. 2020 - Juli 2023",
     description: [
@@ -170,25 +199,6 @@ const educationExperience: Experience[] = [
     ],
     highlight: true,
   },
-  // {
-  //   title: "Technische Mathematik",
-  //   company: "Johannes Kepler Universität",
-  //   date: "Okt. 2019 - Juni 2020",
-  //   description: ["Wechsel aufgrund großem Interesse für Web Development"],
-  // },
-  // {
-  //   title: "Abendgymnasium Linz",
-  //   date: "Sept. 2017 - Juli 2019",
-  // },
-  // {
-  //   title: "Reha & Krankrenhaus",
-  //   date: "Februar 2016 - Sept. 2017",
-  // },
-  // {
-  //   title: "BRG Hamerlingstraße",
-  //   date: "Juli 2021 - Aug. 2022",
-  //   description: ["Schwerpunkt Musisch Kreative Klasse"],
-  // },
 ];
 
 const codingSkills = [
@@ -204,7 +214,7 @@ const frontendSkills = [
   "Vue.js",
   "Nuxt.js",
   "jQuery",
-  "Angular",
+  "Angular.js",
   "React",
 ];
 
@@ -222,17 +232,20 @@ const backendSkills = [
 
 const cmsSkills = ["Storyblock", "Wordpress", "Typo3"];
 
-const otherTechnicalSkills = [
+const cloudPlattformSkills = [
   "AWS",
-  "Git",
-  "SEO",
+  "Azure",
+  "Google Cloud",
+  "Gitlab",
+  "Github",
   "Linux",
-  "LLMs",
-  "Prompt Engineering",
-  "Web Accessibility",
 ];
 
+const aiSkills = ["LLMs", "Prompt Engineering"];
+
 const other = [
+  "Web Accessibility",
+  "SEO",
   "Projektmanagement",
   "Kundenbetreuung",
   "UI/UX Design",
