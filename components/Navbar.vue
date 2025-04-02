@@ -1,7 +1,4 @@
 <template>
-  <!-- TODO: mobile check -->
-  <!-- (TODO: footer impressum on bottom )-->
-  <!-- (TODO: stop animate-bounce?) -->
   <header
     class="z-20 md:flex w-full border-b border-slate-50 shadow-lg after:absolute after:left-0 after:top-full after:z-10 after:block after:h-px after:w-full after:bg-slate-200 md:border-slate-100 md:backdrop-blur-sm md:after:hidden md:justify-center text-black sticky top-0 bg-white"
   >
@@ -132,7 +129,7 @@
 import { ref, onMounted, onUnmounted } from "vue";
 
 const isToggleOpen = ref(false);
-const isMobile = ref(false);
+const isMobile = useState<boolean>("isMobile");
 const firstTimeVisit = ref(true);
 
 const sections = [
@@ -185,6 +182,7 @@ const updateActiveSection = () => {
 };
 
 function scrollToSection(sectionId: string, event: Event) {
+  console.log("scroll to section");
   isScrolling.value = true;
   event.preventDefault();
   activeSection.value = sectionId;
@@ -192,12 +190,12 @@ function scrollToSection(sectionId: string, event: Event) {
   const section = document.getElementById(sectionId);
   if (section) {
     const offsetTop = section.offsetTop - 120; // Adjust for fixed header height
+    if (isMobile.value) {
+      toggleMenu();
+    }
     window.scrollTo({ top: offsetTop, behavior: "smooth" });
 
     history.replaceState(null, "", `#${sectionId}`);
-  }
-  if (isMobile.value) {
-    toggleMenu();
   }
   setTimeout(() => {
     isScrolling.value = false;
